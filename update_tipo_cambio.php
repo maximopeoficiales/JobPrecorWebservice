@@ -85,12 +85,12 @@ class JobsWebservices
         $tiposCambio = $this->getTiposCambioMaxcoPrecor();
         $tipoCambioPrecor = $tiposCambio["precor"];
         $tipoCambioMaxco = $tiposCambio["maxco"];
-        // if ($tipoCambioPrecor != null) {
-        //     $this->updateTypeRateWebservice($this->PRECOR_URL, $tipoCambioPrecor);
-        // } else if ($tipoCambioMaxco != null) {
-        //     $this->updateTypeRateWebservice($this->MAXCO_URL, $tipoCambioMaxco);
-        // }
-        // echo "Operacion realizada con exito";
+        if ($tipoCambioPrecor != null) {
+            $this->updateTypeRateWebservice($this->PRECOR_URL, $tipoCambioPrecor);
+        } else if ($tipoCambioMaxco != null) {
+            $this->updateTypeRateWebservice($this->MAXCO_URL, $tipoCambioMaxco);
+        }
+        echo "Operacion realizada con exito";
         print_r($tiposCambio);
     }
 }
