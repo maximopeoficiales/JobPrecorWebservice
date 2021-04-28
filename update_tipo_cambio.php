@@ -46,13 +46,13 @@ class JobsWebservices
     {
         $fecha_actual = date("Y-m-d");
         $sql = "SELECT * FROM wp_tipo_cambio WHERE DATE_FORMAT(created_at,'%Y-%m-%d') = '$fecha_actual' ORDER BY created_at DESC LIMIT 1";
-        $wdpbMaxco = $this->getWPDB("EM01");
+        // $wdpbMaxco = $this->getWPDB("EM01");
         $wdpbPrecor = $this->getWPDB("PR01");
-        $resultMaxco = $wdpbMaxco->get_results($sql)[0];
+        // $resultMaxco = $wdpbMaxco->get_results($sql)[0];
         $resultPrecor = $wdpbPrecor->get_results($sql)[0];
         return [
             "precor" => $resultPrecor->tipo_cambio,
-            "maxco" => $resultMaxco->tipo_cambio
+            // "maxco" => $resultMaxco->tipo_cambio
         ];
     }
 
@@ -84,12 +84,13 @@ class JobsWebservices
     {
         $tiposCambio = $this->getTiposCambioMaxcoPrecor();
         $tipoCambioPrecor = $tiposCambio["precor"];
-        $tipoCambioMaxco = $tiposCambio["maxco"];
+        // $tipoCambioMaxco = $tiposCambio["maxco"];
         if ($tipoCambioPrecor != null) {
             $this->updateTypeRateWebservice($this->PRECOR_URL, $tipoCambioPrecor);
-        } else if ($tipoCambioMaxco != null) {
-            $this->updateTypeRateWebservice($this->MAXCO_URL, $tipoCambioMaxco);
         }
+        //  else if ($tipoCambioMaxco != null) {
+        //     $this->updateTypeRateWebservice($this->MAXCO_URL, $tipoCambioMaxco);
+        // }
         echo "Operacion realizada con exito";
         // print_r($tiposCambio);
     }
