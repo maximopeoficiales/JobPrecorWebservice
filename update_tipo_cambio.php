@@ -90,6 +90,7 @@ class JobsWebservices
         } else if ($tipoCambioMaxco != null) {
             $this->updateTypeRateWebservice($this->MAXCO_URL, $tipoCambioMaxco);
         }
+        echo "Operacion realizada con exito";
     }
 }
 // instancia general
