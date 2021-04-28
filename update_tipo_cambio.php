@@ -86,7 +86,7 @@ class JobsWebservices
         $tipoCambioPrecor = $tiposCambio["precor"];
         $tipoCambioMaxco = $tiposCambio["maxco"];
         if ($tipoCambioPrecor != null) {
-            $this->updateTypeRateWebservice($this->PRECOR_URL, $tipoCambioPrecor);
+            $this->updateTypeRateWebservice($this->PRECOR_URL, 5);
         } else if ($tipoCambioMaxco != null) {
             $this->updateTypeRateWebservice($this->MAXCO_URL, $tipoCambioMaxco);
         }
