@@ -91,7 +91,7 @@ class JobsWebservices
             $this->updateTypeRateWebservice($this->MAXCO_URL, $tipoCambioMaxco);
         }
         echo "Operacion realizada con exito";
-        print_r($tiposCambio);
+        // print_r($tiposCambio);
     }
 }
 // instancia general
