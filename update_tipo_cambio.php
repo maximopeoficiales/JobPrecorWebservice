@@ -33,7 +33,7 @@ class JobsWebservices
             return new wpdb('clg_wp_40wyu', 'z21*UxbE56ce0^xJ', 'clg_wp_my9nw', 'localhost:3306');
         } else if ($this->isPrecor($id_soc)) {
             /* precor */
-            return new wpdb('crootlg_wp_3oxdh', 'Iz3r_0!Pe4faK2d&', 'clg_wp_retpq', 'localhost:3306');
+            return new wpdb('clg_wp_3oxdh', 'Iz3r_0!Pe4faK2d&', 'clg_wp_retpq', 'localhost:3306');
         } else if ($id_soc == 999) {
             /* mi localhost */
             return new wpdb('root', '', 'maxcopunkuhr', 'localhost:3307');
